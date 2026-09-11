@@ -109,9 +109,9 @@ def process_image(image_path, model):
 
     results = model(str(image_path), task="segment")
     result = results[0]
-
+    
     if result.boxes is None or len(result.boxes) == 0:
-        print("No objects detected.")
+        print("Verdict: That's not a banana!")
         return
 
     banana_indices = []
@@ -124,7 +124,7 @@ def process_image(image_path, model):
             banana_indices.append(i)
 
     if not banana_indices:
-        print("No banana detected.")
+        print("Verdict: That's not a banana!")
         return
 
     print(f"Bananas detected: {len(banana_indices)}")

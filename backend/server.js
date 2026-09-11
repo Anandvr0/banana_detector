@@ -31,9 +31,9 @@ app.post("/analyze", upload.single("image"), (req, res) => {
 
     const imagePath = req.file.path;
 
-    const pythonProcess = spawn("python", [
-        path.join(__dirname, "..", "curvature.py"),
-        imagePath
+    const pythonProcess = spawn("C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python313\\python.exe", [
+    path.join(__dirname, "..", "curvature.py"),
+    imagePath
     ]);
 
     let output = "";

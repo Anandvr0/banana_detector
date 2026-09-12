@@ -1,93 +1,173 @@
 <img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" />
 
-# BananaMath 🍌📐
+# BananaMath 🍌🎯
 
 ## Basic Details
-### Team Name: BananaMath
+
+**Team Name:** Innov8
 
 ### Team Members
-- Team Lead: Anand V R - Rajiv Gandhi Institute of Technology Kottayam
-- Member 2: Jareena Banu S -  Rajiv Gandhi Institute of Technology Kottayam
 
-### Project Description
-BananaMath is an advanced computer vision and geometry application that analyzes any banana to scientifically determine its curvature score (0–100). Powered by YOLO segmentation and Singular Value Decomposition (SVD) centerline tracking, it delivers mathematical certainty and witty classifications for a problem that never needed solving.
+**Team Lead:** Jareena Banu S. - Rajiv Gandhi Institute of Technology, Kottayam
+**Member 2:** Anand V R - Rajiv Gandhi Institute of Technology, Kottayam
 
-### The Problem (that doesn't exist)
-For millennia, consumers and fruit connoisseurs have purchased bananas in absolute darkness—subject to the chaotic whims of agricultural curvature. Is your banana suspiciously straight? Is it moderately curved? Or has it completely rejected Euclidean geometry to become an unsolvable mathematical paradox? Without rigorous algorithmic scoring, civilization simply cannot function.
+## Project Description
 
-### The Solution (that nobody asked for)
-BananaMath combines state-of-the-art YOLO26 instance segmentation, coordinate geometry, and SVD/PCA vector analysis to quantify the exact curvature of any banana. It segments the fruit, traces its non-linear centerline across perpendicular projection bins, computes maximum deviation relative to chord length, and renders annotated visual proof along with existential verdicts like *"This banana has rejected the concept of straight lines."*
+BananaMath is an AI-powered web application that detects bananas from uploaded images using YOLO segmentation. It analyzes the detected banana and calculates its curvature to provide a fun mathematical classification.
+
+## The Problem (that doesn't exist)
+
+Have you ever looked at a banana and wondered:
+
+**“Exactly how mathematically curved is this banana?”** 🍌📐
+
+Probably not. But we decided this extremely important problem deserved an AI solution.
+
+## The Solution (that nobody asked for)
+
+BananaMath allows users to upload a banana image and automatically detects the banana using a YOLO segmentation model.
+
+The system analyzes the detected banana, calculates its curvature, and displays the detection confidence, banana count, curvature value, and a fun classification.
+
+No image matching. No filename guessing. Every uploaded image is processed using the actual detection model.
 
 ## Technical Details
 
 ### Technologies/Components Used
-For Software:
-- **Languages used:** Python 3.11+, JavaScript (ES6+)
-- **Frameworks used:** Express.js (Backend API), React 19 + Vite (Frontend UI)
-- **Libraries used:** 
-  - `ultralytics` (YOLO26-seg instance segmentation)
-  - `opencv-python` (`cv2` contour extraction and annotation)
-  - `numpy` (SVD, projection, median centerline calculation)
-  - `multer` (multipart file upload handling)
-  - `cors` (cross-origin resource sharing)
-- **Tools used:** Git, GitHub, VS Code, Node.js, npm
 
-For Hardware:
-- *N/A (Pure Software Application)*
+### For Software:
 
----
+* **Languages:** Python, JavaScript, HTML, CSS
+* **Frontend:** React, Vite
+* **Backend:** Node.js, Express.js
+* **Machine Learning:** YOLO Segmentation
+* **Libraries:** Ultralytics YOLO, PyTorch, Torchvision, OpenCV, NumPy, Multer, CORS
+* **Model:** `yolo26n-seg.pt`
+* **Tools:** VS Code, Git, GitHub, PowerShell, Docker
+
+### For Hardware:
+
+* No dedicated hardware is required.
+* Computer/Laptop
+* Web browser
+* Internet connection
+* Banana image from a phone or camera
 
 ## Implementation
 
-### Implementation
-For Software:
+### For Software:
 
-# Installation
+The project works through the following process:
+
+1. The user uploads a banana image.
+2. The React frontend sends the image to the backend.
+3. Node.js and Express receive the uploaded image.
+4. The backend runs the Python analysis program.
+5. YOLO segmentation detects the banana in the image.
+6. The detected banana is analyzed for its curvature.
+7. The analysis result is returned to the frontend.
+8. BananaMath displays the detection confidence, banana count, curvature and classification.
+
+## Installation
+
+Clone the repository:
+
 ```bash
-# 1. Clone the repository
-git clone https://github.com/Anandvr0/banana_detector.git
+git clone https://github.com/jareenabanu/banana_detector.git
 cd banana_detector
-
-# 2. Install Python dependencies
-pip install -r requirements.txt
-
-# 3. Install Backend dependencies
-cd backend
-npm install
-
-# 4. Install Frontend dependencies
-cd ../frontend
-npm install
 ```
 
-# Run
+Install backend dependencies:
+
 ```bash
-# Start Backend Server (runs on http://localhost:5000)
 cd backend
-node server.js
-
-# In a separate terminal, start Frontend (runs on http://localhost:5173)
-cd frontend
-npm run dev
-
-# Or run the CLI test directly:
-python curvature.py test_images/yellow_banana.jpeg
+npm install
+cd ..
 ```
 
----
+Install frontend dependencies:
 
-### Project Documentation
-For Software:
+```bash
+cd frontend
+npm install
+cd ..
+```
 
-# Screenshots
-![Moderately Curved Banana](./output/curvature_yellow_banana_1.jpg)
-*Curvature Analysis: High-precision contour extraction detecting a Moderately Curved banana (Curvature Score: 53.8/100).*
+Install Python dependencies:
 
-![Slightly Curved Banana](./output/curvature_green_banana_1.jpg)
-*Curvature Analysis: Detection and classification of a Slightly Curved green banana.*
+```bash
+pip install -r requirements.txt
+```
 
-![YOLO Segmentation](./output/result_test_banana.jpg)
-*YOLO Instance Segmentation: Validating banana class identification and bounding box confidence.*
+## Run
+
+From the project root directory:
+
+```bash
+npm run dev
+```
+
+The command starts both the frontend and backend.
+
+Frontend:
+
+```text
+http://localhost:5173
+```
+
+If port 5173 is already in use, Vite automatically selects another available port, such as:
+
+```text
+http://localhost:5174
+```
+
+Backend:
+
+```text
+http://localhost:5000
+```
+
+## Project Documentation
+
+### For Software:
+
+## Screenshots
+
+**Upload Page:** Shows the BananaMath interface where users can upload or drag and drop a banana image.
+
+
+<img width="1920" height="1020" alt="1" src="https://github.com/user-attachments/assets/a11f68a4-b9fd-45f8-980b-53ede170975a" />
+
+
+**Result Page:** Displays the analysis results including banana detection, confidence, curvature and classification.
+
+
+<img width="1920" height="1020" alt="2" src="https://github.com/user-attachments/assets/54d0b2d4-b568-4312-a29a-4c87a4085780" />
+
+
+**Processed Image:** Shows the processed banana image generated after YOLO segmentation and curvature analysis.
+
+
+<img width="1920" height="1020" alt="3" src="https://github.com/user-attachments/assets/f0c130e5-cfb7-44bf-8f95-fb86b60077f7" />
+
+
+## Diagrams
+
+![Workflow](screenshots/workflow.png)
+
+**Workflow:** Shows the complete workflow from image upload to banana detection, curvature analysis and result display.
+
+## For Hardware:
+
+**Not applicable. BananaMath is a software-only project.**
+
+## Schematic & Circuit
+
+**Not applicable.**
+
+## Build Photos
+
+**Not applicable.**
 
 # Diagrams
 ```mermaid
@@ -106,33 +186,44 @@ graph TD
     C -->|HTTP 200 Response| B
     B --> L[Render Curvature Score, Verdict & Visual Proof]
 ```
-*Architecture & Pipeline: From image upload to YOLO segmentation, SVD geometric analysis, and interactive UI display.*
 
-For Hardware:
-- *N/A (Pure Software Application)*
+## Project Demo
 
-### Project Demo
-# Video
+### Video
+
+The demo video demonstrates uploading a new banana image, detecting the banana using YOLO segmentation, calculating its curvature and displaying the final result.
 
 
-https://github.com/user-attachments/assets/3d01e5b2-0d59-4d95-b08f-dcf83fce1f64
-
+https://github.com/user-attachments/assets/d8bd2507-20b7-4176-bb57-9a9d1bd38b13
 
 
 
-*A walkthrough demonstration showcasing the React interface, live banana image upload, instant curvature scoring, and generated visual proof.*
 
-# Additional Demos
-[Add any extra demo materials/links]
 
----
+### Additional Demos
+
+* GitHub Repository: https://github.com/jareenabanu/banana_detector
+* Live Demo: Add the deployed website link after hosting
 
 ## Team Contributions
-- **Anand V R:** Backend API architecture, Express-Python subprocess bridge, frontend UI development, and repository management.
-- **Jareena Banu S:** Computer vision pipeline, YOLO26 segmentation integration, curvature mathematical algorithm, and testing.
+
+**Jareena Banu S.:**
+
+* Developed the frontend interface using React and Vite
+* Worked on UI design and user experience
+* Worked on project documentation and presentation
+* Assisted with testing and deployment
+
+**Anand V R:**
+
+* Worked on YOLO-based banana detection and curvature analysis
+* Integrated the image upload and analysis workflow
+* Worked on backend integration
+* Assisted with testing and validation
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
 
 ![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
 ![Static Badge](https://img.shields.io/badge/UselessProjects--26-26?link=https%3A%2F%2Ftinkerhub.org%2Fevents%2F1M8ORET9A1%2Fuseless-projects-3.0)
+

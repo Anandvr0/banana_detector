@@ -6,8 +6,8 @@
 ### Team Name: BananaMath
 
 ### Team Members
-- Team Lead: Anand V R - [College]
-- Member 2: Jareena Banu S - [College]
+- Team Lead: Anand V R - Rajiv Gandhi Institute of Technology Kottayam
+- Member 2: Jareena Banu S -  Rajiv Gandhi Institute of Technology Kottayam
 
 ### Project Description
 BananaMath is an advanced computer vision and geometry application that analyzes any banana to scientifically determine its curvature score (0–100). Powered by YOLO segmentation and Singular Value Decomposition (SVD) centerline tracking, it delivers mathematical certainty and witty classifications for a problem that never needed solving.
@@ -113,7 +113,13 @@ For Hardware:
 
 ### Project Demo
 # Video
-[Add your demo video link here]
+
+
+https://github.com/user-attachments/assets/3d01e5b2-0d59-4d95-b08f-dcf83fce1f64
+
+
+
+
 *A walkthrough demonstration showcasing the React interface, live banana image upload, instant curvature scoring, and generated visual proof.*
 
 # Additional Demos
